@@ -13,7 +13,7 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../admin/css/add_school.css" rel="stylesheet" />
+    <link href="../parent/css/transfer_form.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
 </head>
@@ -27,7 +27,6 @@
         <!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
-
             </div>
         </form>
         <!-- Navbar-->
@@ -58,115 +57,99 @@
 
 
 
-                        <!-- ============school management pages==== -->
-                        <a class="nav-link collapsed" href="" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            School
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-
-
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="manage_school.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                            Manage Schools
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-
-                            </nav>
-                        </div>
-
                         <!-- ===================end users management==== -->
-                        <!-- ============school management pages==== -->
-                        <a class="nav-link collapsed" href="" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            Head Teacher
-
+                        <!-- ==========02.Users==========  -->
+                        <div class="sb-sidenav-menu-heading">USERS</div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Pupil
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
 
-
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="manage_head_teacher.htmlmanage_school.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-    Manage Head Teacher
-    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-    </a>
-
-                            </nav>
-                        </div>
-                        <!-- ============school management pages==== -->
-                        <a class="nav-link collapsed" href="" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            Deo
-
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-
-
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="manage_deo.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-    Manage Deo
-    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-    </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="manage_pupil.html">Manage Pupil</a>
 
                             </nav>
                         </div>
 
 
-                        <!-- ===================end users management==== -->
+                        <!-- ============ teacher/=========== -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Teacher
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
 
-                        <!-- ==============end head teacher============ -->
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="manage_teacher.html">Manage Teacher</a>
 
+                            </nav>
+                        </div>
 
-                        <!-- ==============end District Edu============ -->
+                        <!-- ==============end teacher============ -->
 
+                        <!-- ============ teacher/=========== -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Subjects
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="Manage_subjects.html">Manage Subjects</a>
+
+                            </nav>
+                        </div>
+
+                        <!-- ==============end teacher============ -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            classes
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="manage_class.html">Manage classes</a>
+
+                            </nav>
+                        </div>
 
                         <!-- ===============others===== -->
+
 
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    PTCAIS Admin
+                    HeadTeacher
                 </div>
             </nav>
         </div>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">DEO Registration</h1>
+                    <h1 class="mt-4">Class Registration</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Add DEO</li>
+                        <li class="breadcrumb-item active">Manage Class</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-body">
-                            <!-- =====Manage School======= -->
-
+                            <!-- =====manage subject======= -->
                             <div class="container">
                                 <h1> </h1>
 
                                 <form>
 
                                     <div class="form-group">
-                                        <label>DEO Name:</label>
-                                        <input type="text" name="deoname" class="form-control" placeholder="enter DEO name" required="">
+                                        <label>Class Name:</label>
+                                        <input type="text" name="cname" class="form-control" placeholder="enter class name" required="">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Region Name:</label>
-                                        <input type="text" name="rname" class="form-control" placeholder="enter region name" required="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>District Name:</label>
-                                        <input type="text" name="dname" class="form-control" placeholder="enter district name" required="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Ward Name:</label>
-                                        <input type="text" name="wname" class="form-control" placeholder="enter ward name" required="">
-                                    </div>
 
 
                                     <button type="submit" class="btn btn-success save-btn">Save</button>
@@ -175,12 +158,7 @@
                                 <br/>
                                 <table class="table table-bordered data-table">
                                     <thead>
-                                        <th>DEO Name</th>
-
-                                        <th>Region Name</th>
-                                        <th>District Name</th>
-                                        <th>Ward Name</th>
-
+                                        <th>Class Name</th>
 
                                         <th width="200px">Action</th>
                                     </thead>
@@ -210,11 +188,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="../admin/js/manage_deo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../head_teacher/js/manage_class.js"></script>
 </body>
 
 </html>

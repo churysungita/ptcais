@@ -1,15 +1,27 @@
 $("form").submit(function(e) {
     e.preventDefault();
     var tname = $("input[name='tname']").val();
-    var sname = $("input[name='sname']").val();
+
+    //manage classes
+    var classname = [];
+    $.each($(".classname option:selected"), function() {
+        classname.push($(this).val());
+        classname.join(",");
+    });
+    //manage subjects
+    var subjectname = [];
+    $.each($(".subjectname option:selected"), function() {
+        subjectname.push($(this).val());
+        subjectname.join(",");
+    });
 
 
-
-
-    $(".data-table tbody").append("<tr data-tname='" + tname + "' data-sname='" + sname + "' ><td>" + tname + "</td> <td>" + sname + "</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>");
+    $(".data-table tbody").append("<tr data-tname='" + tname + "' data-subjectname='" + subjectname + "' data-classname='" + classname + "' ><td>" + tname + "</td> <td>" + subjectname + "</td><td>" + classname + "</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>");
 
     $("input[name='tname']").val('');
-    $("input[name='sname']").val('');
+    $("option[name='subjectname']").val('');
+    $("option[name='classname]").val('');
+    // $("option[name='classname']").val('');
 
 });
 
@@ -20,23 +32,26 @@ $("body").on("click", ".btn-delete", function() {
 $("body").on("click", ".btn-edit", function() {
 
     var tname = $(this).parents("tr").attr('data-tname');
-    var sname = $(this).parents("tr").attr('data-sname');
-
+    var subjectname = $(this).parents("tr").attr('data-subjectname');
+    var classname = $(this).parents("tr").attr('data-classname');
 
     $(this).parents("tr").find("td:eq(0)").html('<input name="edit_tname" value="' + tname + '">');
-    $(this).parents("tr").find("td:eq(1)").html('<input name="edit_sname" value="' + sname + '">');
+    $(this).parents("tr").find("td:eq(1)").html('<input name="edit_subjectname" value="' + subjectname + '">');
+    $(this).parents("tr").find("td:eq(2)").html('<input name="edit_classname" value="' + classname + '">');
 
-    $(this).parents("tr").find("td:eq(2)").prepend("<button class='btn btn-info btn-xs btn-update'>Update</button><button class='btn btn-warning btn-xs btn-cancel'>Cancel</button>")
+    $(this).parents("tr").find("td:eq(3)").prepend("<button class='btn btn-info btn-xs btn-update'>Update</button><button class='btn btn-warning btn-xs btn-cancel'>Cancel</button>")
     $(this).hide();
 });
 
 $("body").on("click", ".btn-cancel", function() {
     var tname = $(this).parents("tr").attr('data-tname');
-    var sname = $(this).parents("tr").attr('data-sname');
+    var subjectname = $(this).parents("tr").attr('data-subjectname');
+    var classname = $(this).parents("tr").attr('data-classname');
 
 
     $(this).parents("tr").find("td:eq(0)").text(tname);
-    $(this).parents("tr").find("td:eq(1)").text(sname);
+    $(this).parents("tr").find("td:eq(1)").text(subjectname);
+    $(this).parents("tr").find("td:eq(2)").text(classname);
 
     $(this).parents("tr").find(".btn-edit").show();
     $(this).parents("tr").find(".btn-update").remove();
@@ -45,19 +60,34 @@ $("body").on("click", ".btn-cancel", function() {
 
 $("body").on("click", ".btn-update", function() {
     var tname = $(this).parents("tr").find("input[name='edit_tname']").val();
-    var sname = $(this).parents("tr").find("input[name='edit_sname']").val();
+    var subjectname = $(this).parents("tr").find("input[name='edit_subjectname']").val();
+    var classname = $(this).parents("tr").find("option[name='edit_classname']").val();
 
     $(this).parents("tr").find("td:eq(0)").text(tname);
-    $(this).parents("tr").find("td:eq(1)").text(sname);
+    $(this).parents("tr").find("td:eq(1)").text(subjectname);
+    $(this).parents("tr").find("td:eq(2)").text(classname);
+
 
 
 
     $(this).parents("tr").attr('data-tname', tname);
-    $(this).parents("tr").attr('data-sname', sname);
-
+    $(this).parents("tr").attr('data-subjectname', subjectname);
+    $(this).parents("tr").attr('data-classname', classname);
 
 
     $(this).parents("tr").find(".btn-edit").show();
     $(this).parents("tr").find(".btn-cancel").remove();
     $(this).parents("tr").find(".btn-update").remove();
+});
+// ===== option select======//
+$(document).ready(function() {
+
+    var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+        removeItemButton: true,
+        // maxItemCount: 5,
+        // searchResultLimit: 5,
+        // renderChoiceLimit: 5
+    });
+
+
 });
