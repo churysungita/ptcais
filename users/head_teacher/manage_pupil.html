@@ -34,8 +34,6 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
@@ -56,17 +54,16 @@
                         </a>
 
                         <!-- ===================end users management==== -->
-                        <!-- ==========02.Users==========  -->
-                        <div class="sb-sidenav-menu-heading">USERS</div>
+
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            Parent / Pupils
+                            Pupils
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
 
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="manage_pupil.html">Manage Pupil</a>
+                                <a class="nav-link" href="manage_pupil.html">Manage Pupils</a>
 
                             </nav>
                         </div>
@@ -131,7 +128,7 @@
                     <h1 class="mt-4">Pupil Registration</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Add Pupil</li>
+                        <li class="breadcrumb-item active">Add Pupils</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-body">
@@ -155,7 +152,74 @@
                                         <input type="text" name="gender" class="form-control" placeholder="enter pupil gender" required="">
                                     </div>
 
+                                    <!-- ===select region=== -->
+                                    <div class="form-group">
+                                        <label>Region Name</label>
+                                        <div class="row d-flex justify-content-center mt-90">
+                                            <div class="col-md-12">
+                                                <select id="choices-multiple-remove-button" class="regname" placeholder="Select region name" multiple>
+                
+                                                <option value="Dodoma" name="regname" >Dodoma</option>
+                                                <option value="Arusha" name="regname" >Arusha</option>
+                                                <option value="Singida" name="regname" >Singida</option>
+                                                <option value="Mwanza" name="regname" >Mwanza</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    </div>
 
+
+
+                                    <!-- ===select district=== -->
+                                    <div class="form-group">
+                                        <label>District Name</label>
+                                        <div class="row d-flex justify-content-center mt-90">
+                                            <div class="col-md-12">
+                                                <select id="choices-multiple-remove-button" class="dname" placeholder="Select district name" multiple>
+                
+                                                    <option value="Dodoma mjini" name="dname" >Dodoma mjini</option>
+                                                    <option value="Arusha M" name="dname" >Arusha M</option>
+                                                    <option value="Singida G" name="dname" >Singida G</option>
+                                                    <option value="Mwanza M" name="dname" >Mwanza M</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- ===select scchool=== -->
+                                    <div class="form-group">
+                                        <label>School Name</label>
+                                        <div class="row d-flex justify-content-center mt-90">
+                                            <div class="col-md-12">
+                                                <select id="choices-multiple-remove-button" class="sname" placeholder="Select region name" multiple>
+            
+                                                <option value="Dodoma primary school" name="sname" >Dodoma primary school</option>
+                                                <option value="Arusha primary school" name="sname" >Arusha primary school</option>
+                                                <option value="Singida primary school" name="sname" >Singida primary school</option>
+                                                <option value="Mwanza primary school" name="sname" >Mwanza primary school</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- ===select class=== -->
+                                    <div class="form-group">
+                                        <label>Class Name</label>
+                                        <div class="row d-flex justify-content-center mt-90">
+                                            <div class="col-md-12">
+                                                <select id="choices-multiple-remove-button" class="cname" placeholder="Select district name" multiple>
+            
+                                                <option value="std one" name="cname" >std one</option>
+                                                <option value="std two" name="cname" >std two</option>
+                                                <option value="std three" name="cname" >std three</option>
+                                                <option value="std four" name="cname" >std four</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                     <button type="submit" class="btn btn-success save-btn">Save</button>
@@ -164,9 +228,14 @@
                                 <br/>
                                 <table class="table table-bordered data-table">
                                     <thead>
-                                        <th>Student Name</th>
+                                        <th>Pupil Name</th>
                                         <th>Pupil Reg#</th>
                                         <th>Gender</th>
+                                        <th>Region Name</th>
+                                        <th>District Name</th>
+                                        <th>School Name</th>
+                                        <th>Class Name</th>
+
 
 
                                         <th width="200px">Action</th>
@@ -198,11 +267,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
     <script src="../head_teacher/js/manage_pupil.js"></script>
+
 </body>
 
 </html>
