@@ -3,9 +3,8 @@
 }
 
 body {
-    background: #00B4DB;
-    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
-    background: linear-gradient(to right, #0083B0, #00B4DB);
+    background: -webkit-linear-gradient(to right, #717779, #7c8081);
+    background: linear-gradient(to right, #a3abad, #a2a7a8);
     color: #514B64;
     min-height: 100vh;
     font-size: 12px;

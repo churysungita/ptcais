@@ -63,8 +63,8 @@ $("body").on("click", ".btn-cancel", function() {
 });
 
 $("body").on("click", ".btn-update", function() {
-    var subjectname = $(this).parents("tr").find("option[name='edit_subjectname']").val();
-    var pname = $(this).parents("tr").find("option[name='edit_pname']").val();
+    var subjectname = $(this).parents("tr").find("input[name='edit_subjectname']").val();
+    var pname = $(this).parents("tr").find("input[name='edit_pname']").val();
     var pmarks = $(this).parents("tr").find("input[name='edit_pmarks']").val();
 
 
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
     var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
         removeItemButton: true,
-        // maxItemCount: 5,
+        maxItemCount: 1,
         // searchResultLimit: 5,
         // renderChoiceLimit: 5
     });
