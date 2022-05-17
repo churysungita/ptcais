@@ -12,7 +12,6 @@ let tr = tBody.getElementsByTagName('TR');
 let span = document.getElementsByClassName("close")[0];
 
 
-
 // When the user clicks on the button, open the modal 
 for (let i = 0; i < tr.length; i++) {
     tr[i].onclick = function() {
@@ -56,7 +55,6 @@ var modalConfirm = function(callback) {
 };
 
 modalConfirm(function(confirm) {
-    const Allrows = document.querySelectorAll("tr");
     if (confirm) {
 
         $("#result").html("Approved");

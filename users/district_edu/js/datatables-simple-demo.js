@@ -1,9 +1,9 @@
-window.addEventListener('DOMContentLoaded', event => {
-    // Simple-DataTables
-    // https://github.com/fiduswriter/Simple-DataTables/wiki
-
-    const datatablesSimple = document.getElementById('datatablesSimple');
-    if (datatablesSimple) {
-        new simpleDatatables.DataTable(datatablesSimple);
+modalConfirm(function(confirm) {
+    if (confirm) {
+        //Acciones si el usuario confirma
+        $("#result").html("Approve");
+    } else {
+        //Acciones si el usuario no confirma
+        $("#result").html("Disapprove");
     }
 });

@@ -66,10 +66,6 @@
                             </nav>
                         </div>
 
-
-
-
-
                         <!-- ============ transfer request/=========== -->
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -119,6 +115,7 @@
                                                             <th scope="col">Name</th>
                                                             <th scope="col">Status</th>
                                                             <th scope="col">Comment</th>
+                                                            <th scope="col">Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -132,6 +129,8 @@
 
                                                             </td>
                                                             <td>Satisfy</td>
+                                                            <td><button type="button" class="btn btn-success" id="modal-btn-reject">Reject</button>
+                                                                <button type="button" class="btn btn-danger" id="modal-btn-modify">Modify</button></td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">2</th>
@@ -142,6 +141,8 @@
                                                                 <p>Rejected</p>
                                                             </td>
                                                             <td>Not accepted</td>
+                                                            <td><button type="button" class="btn btn-success" id="modal-btn-reject">Reject</button>
+                                                                <button type="button" class="btn btn-danger" id="modal-btn-modify">Modify</button></td>
                                                         </tr>
 
                                                     </tbody>

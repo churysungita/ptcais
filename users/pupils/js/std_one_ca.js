@@ -1,20 +1,16 @@
-$("body").on("click ", "#btnExport ", function() {
-    html2canvas($('#tblResults')[0], {
-        onrendered: function(canvas) {
-            var data = canvas.toDataURL();
-            var docDefinition = {
-                content: [{
-                    image: data,
-                    width: 500,
-                    pageSize: 'A4'
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function(element, renderer) {
+        return true;
+    }
+};
 
-
-                }]
-            };
-
-            pdfMake.createPdf(docDefinition).download('student-ca.pdf', function() {
-                alert('your pdf is done');
-            });
-        }
+//margins.left, // x coord   margins.top, { // y coord
+$('#btnExport').click(function() {
+    doc.fromHTML($('#layoutSidenav_content').html(), 50, 50, {
+        'width': 700,
+        pageSize: 'A4',
+        'elementHandlers': specialElementHandlers
     });
+    doc.save('student_ca.pdf');
 });

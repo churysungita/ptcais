@@ -11708,3 +11708,81 @@ body {
     font-size: 0.75rem;
     border-radius: 0.25rem !important;
 }
+
+
+/* ==== table for transfe====*/
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: lightyellow;
+    border: 1px solid darkcyan;
+    font-family: sans-serif;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 16px;
+}
+
+td {
+    padding: 16px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 6;
+    /* Sit on top */
+    padding-left: 350px;
+    padding-top: 150px;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.58);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    padding-left: 15px;
+    /* 15% from the top and centered */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%;
+    align-items: center;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
